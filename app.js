@@ -11,6 +11,9 @@ require("./configs/db.config");
 require("./configs/debugger.config");
 
 
+
+
+
 // Middleware Setup
 // const func = require('./configs/middleware.config');
 // func(app);
@@ -31,3 +34,4 @@ app.use('/', index);
 app.use("/private", privateRouter);
 app.use("/auth", authRouter);
 module.exports = app;
+

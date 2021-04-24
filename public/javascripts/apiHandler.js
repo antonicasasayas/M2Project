@@ -1,9 +1,12 @@
-// class ApiHandler {
-//   constructor(baseURL) {
-//     this.baseURL = baseURL;
-//   }
+class APIHandler {
+  
 
-//   getFilm(number) {
-//     return axios.get(`${this.baseURL}/pokemon/${number}`);
-//   }
-// }
+  getPosts() {
+    return axios.get(`localhost:3000/private/feed`);
+  }
+
+  deletePosts(id) {
+    return axios.delete(`${this.baseURL}/students/${id}`);
+  }
+
+}

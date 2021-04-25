@@ -11,6 +11,10 @@ require("./configs/db.config");
 // Debbuger
 require("./configs/debugger.config");
 
+
+
+
+
 // Middleware Setup
 // const func = require('./configs/middleware.config');
 // func(app);
@@ -32,6 +36,7 @@ app.use("/private", privateRouter);
 app.use("/auth", authRouter);
 module.exports = app;
 
+<<<<<<< HEAD
 const titlesArray = [
   
   "",
@@ -193,3 +198,5 @@ console.log("IronGenerator JS imported successfully!");
 //      .then(() => console.log("ready"))
 //    .catch(() => console.log("whoops")  )
 //  });
+=======
+>>>>>>> 42f3ebcadc1c1d83ff54611c6bca7c69c6250a9d

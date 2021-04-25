@@ -1,1 +1,30 @@
-<h3>This is what everyone is talking about right now.</h3>     
+<h1>FEED</h1>
+<form action="/private/feed" method="POST">
+
+  <label for="Comment">Comment:</label>
+  <input type="text" name="content">
+  
+  <button class="createPost" type="submit">Crear</button>
+</form>
+<div id="posts">
+{{#each posts}}
+  <h3>{{content}}</h3>
+  <h9>{{date}}</h9>
+ 
+ <a href="/private/{{id}}/edit">Edit comment</a>
+
+ <form action="/private/{{id}}/delete" method="POST">
+    <button class="deletePost" type="submit">Delete</button>
+  </form>
+ 
+{{/each}}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="/javascripts/apiHandler.js"></script>
+<script src="/javascripts/index.js"></script>
+{{!-- 
+ title: { type: String },
+  author: String,
+  date: { type: Date },
+  content: String --}}

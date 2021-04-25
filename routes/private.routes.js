@@ -1,18 +1,38 @@
 const express = require("express");
+const { serializeUser } = require("passport");
 const { isLoggedIn } = require("../middlewares");
 const router = express.Router();
 const Post = require('../models/Post.model');
+<<<<<<< HEAD
 
+=======
+const Series = require("../models/Series.model")
+>>>>>>> antoni
 router.get("/profile", isLoggedIn, (req, res, next) => {
   res.render("profile", { user: req.user });
 });
 
-router.get("/quiz", isLoggedIn, (req, res, next) => {
-  res.render("quiz", { user: req.user });
-});
 
+
+router.get("/quiz", isLoggedIn, (req, res, next) => {
+  res.render("quiz", { user: req.user})
+  
+  
+  
+});
+// $or:  })[], })
+// { genre: { $regex: `.*${drama}.*` } },
+// { genre: { $regex: `.*${action}.*` } }
 router.post("/quiz", isLoggedIn, (req, res) => {
-  res.redirect("/private/recommendations")
+  const { comedy, drama, action } = req.body
+  Series.find({ genre: { $regex: `.*${comedy}.*` } })
+    .then((comedies) => {
+      console.log(`These are the ${comedies}`)
+      res.render("recommendations", { comedies });
+    })
+    .catch((error) => console.error(error));
+  
+  
 })
 
 router.get("/feed", isLoggedIn, (req, res) => {
@@ -69,8 +89,5 @@ router.post('/:id/edit', (req, res) => {
 
 
 
- router.get("/recommendations", isLoggedIn, (req, res) => {
-   res.render("recommendations", { user: req.user });
- })
-
+ 
 module.exports = router;

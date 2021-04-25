@@ -1,4 +1,4 @@
-<h1>FEED</h1>
+{{!-- <h1>FEED</h1>
 <form action="/private/feed" method="POST">
 
   <label for="Comment">Comment:</label>
@@ -22,9 +22,61 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="/javascripts/apiHandler.js"></script>
-<script src="/javascripts/index.js"></script>
-{{!-- 
- title: { type: String },
-  author: String,
-  date: { type: Date },
-  content: String --}}
+<script src="/javascripts/index.js"></script> --}}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootdey">
+<div class="col-md-12 bootstrap snippets">
+<div class="panel">
+  <div class="panel-body">
+    <form action="/private/feed" method="POST">
+    <input type="text" name="content" class="form-control" rows="2" placeholder="What are you thinking?">  
+   
+    <button class="btn btn-sm btn-primary pull-right" class="createPost" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+    </form>
+
+    <div class="mar-top clearfix">
+      <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+      <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+      <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+{{!-- /*New*/ --}}
+  {{#each posts}}
+ <div class="container bootstrap snippets bootdey">
+    <div class="row">
+		<div class="col-md-12">
+		    <div class="blog-comment">
+			
+                <hr/>
+				<ul class="comments">
+				<li class="clearfix">
+				  
+				  <div class="post-comments">
+				      <p class="meta"><a href="#">JohnDoe</a> says : <i class="pull-right"><a href="#"><small></small></a></i></p>
+				      <p>
+				          {{content}}
+				      </p>
+              <a class="btn btn-sm btn-default btn-hover-primary" href="/private/{{id}}/edit">Edit comment</a>
+              <form class="btn btn-sm btn-default btn-hover-primary" action="/private/{{id}}/delete" method="POST">
+          <button class="deletePost" type="submit">Delete</button>
+          </form>
+				  </div>
+				</li>
+			
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ {{/each}}
+
+
+
+
+<script src="/javascripts/index.js"></script> 

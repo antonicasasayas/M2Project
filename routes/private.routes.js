@@ -16,7 +16,7 @@ router.post("/quiz", isLoggedIn, (req, res) => {
 })
 
 router.get("/feed", isLoggedIn, (req, res) => {
-  Post.find({}).sort({date:-1})
+  Post.find({}).sort({date:-1}).limit(5)
    
     .then(posts => {
       res.render('feed', {posts})//

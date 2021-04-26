@@ -3,11 +3,7 @@ const { serializeUser } = require("passport");
 const { isLoggedIn } = require("../middlewares");
 const router = express.Router();
 const Post = require('../models/Post.model');
-<<<<<<< HEAD
-
-=======
 const Series = require("../models/Series.model")
->>>>>>> antoni
 router.get("/profile", isLoggedIn, (req, res, next) => {
   res.render("profile", { user: req.user });
 });

@@ -34,9 +34,9 @@ router.post("/quiz", isLoggedIn, (req, res) => {
 
 router.get("/feed", isLoggedIn, (req, res) => {
   Post.find({}).sort({date:-1})
-   
+   .populate("user_id")
     .then(posts => {
-      res.render('feed', {posts})//
+      res.render('feed', {posts, user: req.user})//
     })
     .catch(error => console.error(error))
   
@@ -44,7 +44,7 @@ router.get("/feed", isLoggedIn, (req, res) => {
 
  router.post("/feed", isLoggedIn, (req, res) =>{
    const { content, date } = req.body;
-   Post.create({ content, date})
+   Post.create({ content, date, user_id: req.user._id})
    .then(() => {
     res.redirect("/private/feed")
   })

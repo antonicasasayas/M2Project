@@ -10,6 +10,6 @@ class APIHandler {
   }
 
   likeSeries(id) {
-    return axios.post(`localhost:3000/private/recommendations`);
+    return axios.post(`localhost:3000/private/`);
   }
 }

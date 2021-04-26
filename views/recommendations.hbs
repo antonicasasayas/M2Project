@@ -1,15 +1,14 @@
 <h1>Here's a list of films you will love</h1>
 
-{{#each dramas}}
-<h2>{{title}}</h2>
-<h3>{{actors}}</h3>
-<img src={{image}} alt=>
-{{/each}}
-
-
 {{#each comedies}}
 <h2>{{title}}</h2>
 <h3>{{actors}}</h3>
 <img src={{image}} alt=>
+
+  
+<form   action="/private/recommendations" method="POST">
+  <button class="btn btn-dark" id="likebtn" ><i class="fas fa-heart"></i></button>
+</form>
+
 {{/each}}
 <a href="/movietitle/details">Movie details</a>

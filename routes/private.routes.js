@@ -212,13 +212,14 @@ router.get("/feed", isLoggedIn, (req, res) => {
   Post.find({})
     .sort({ date: -1 })
     .populate("user_id")
+    .lean()
 
     .then((posts) => {
       for (let i = 0; i < posts.length; i++){
 
         if (String(posts[i].user_id._id) === String(req.user.id)) {
           
-          posts[i].content = "hola";
+          posts[i].isEditable = true;
           console.log(posts[i]);
           }
       }

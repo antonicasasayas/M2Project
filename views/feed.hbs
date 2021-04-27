@@ -41,7 +41,7 @@
           <h4>{{user_id.username}}</h4> <span></span> <br>
           <p id="comment">{{content}}</p>
 
-          {{!-- {{#if this.isEditable}} --}}
+          {{#if this.isEditable}}
           <form style="margin: 0; padding: 0;" id="editbtn" action="/private/{{id}}/edit" method="GET">
             <button class="btn btn-dark" id="editbutton" href="/private/{{id}}/edit">Edit</button>
           </form>
@@ -50,7 +50,7 @@
             <button class="btn btn-dark" id="deletebutton" type="submit">Delete</button>
           </form>
         </div>
-        {{!-- {{/if}} --}}
+        {{/if}}
         {{/each}}
       </div>
 

@@ -2,6 +2,20 @@
 <p>{{series.plot}}</p>
 <p>{{series.actors}}</p>
 <img src={{series.image}} alt="">
-<form  method="POST">
-  <button class="btn btn-dark" id="likebtn"><i class="fas fa-heart"></i></button>
+
+
+{{#if showWishlist}}
+{{#if addWishlist}}
+<form action="/private/add-favorites" method="POST">
+  <input type="hidden" name="seriesID" value="{{series._id}}">
+  <button type="submit"><i class="far fa-heart"></i></button>
 </form>
+{{/if}}
+{{!-- Game added to user wishlist --}}
+{{#unless addWishlist}}
+<form action="/private/add-favorites" method="POST">
+  <input type="hidden" name="seriesID" value="{{series._id}}">
+  <button type="submit"><i class="fas fa-heart"></i></button>
+</form>
+{{/unless}}
+{{/if}}

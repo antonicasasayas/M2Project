@@ -3,12 +3,94 @@ const { serializeUser } = require("passport");
 const { isLoggedIn } = require("../middlewares");
 const router = express.Router();
 const Post = require('../models/Post.model');
-const Series = require("../models/Series.model")
+const Series = require("../models/Series.model");
+const User = require("../models/User.model");
 router.get("/profile", isLoggedIn, (req, res, next) => {
-  res.render("profile", { user: req.user });
+  const { id } = req.params;
+  User.findById(id)
+    .populate("favorites")
+    .then((user) => {
+    res.render("profile", { user });
+  })
+  
 });
 
+router.get("/series/:id", (req, res, next) => {
+  const { id } = req.params;
+  
+  let addWishlist = true;
+  let showWishlist = true;
+  Series.findById(id)
+    .then((series) => {
+          const { _id: userID } = req.user;
+          User.findById(userID).then((user) => {
+           
+              if (user.favorites.includes(id)) {
+              addWishlist = false;
+            }
+            res.render("movie-details", {
+              series,
+              user: req.user,
+              addWishlist,
+        
+              showWishlist,
+              
+            });
+          });
+        })
+        .catch((error) => next(error));
+    })
+    .catch((error) => next(error));
+});
 
+router.post("/add-favorites", (req, res, next) => {
+  const { seriesID } = req.body;
+  const { _id: userID } = req.user;
+  User.findById(userID)
+    .then((user) => {
+      if (user) {
+        const { favorites } = user;
+        if (!favorites.includes(seriesID)) {
+          User.findByIdAndUpdate(
+            userID,
+            { $push: { favorites: seriesID } },
+            { new: true }
+          )
+            .then((user) => res.redirect(`/series/${seriesID}`))
+            .catch((error) => next(error));
+        } else {
+          res.redirect(`/private/series/${seriesID}`);
+        }
+      } else {
+        res.redirect(`/private/series/${seriesID}`);
+      }
+    })
+    .catch((error) => next(error));
+});
+router.post("/remove-favorites", (req, res, next) => {
+  const { seriesID } = req.body;
+  const { _id: userID } = req.user;
+  User.findById(userID)
+    .then((user) => {
+      if (user) {
+        const { favorites } = user;
+        if (favorites.includes(seriesID)) {
+          User.findByIdAndUpdate(
+            userID,
+            { $pull: { favorites: seriesID } },
+            { new: true }
+          )
+            .then((user) => res.redirect(`/series/${seriesID}`))
+            .catch((error) => next(error));
+        } else {
+          res.redirect(`/series/${seriesID}`);
+        }
+      } else {
+        res.redirect(`/series/${seriesID}`);
+      }
+    })
+    .catch((error) => next(error));
+});
 
 router.get("/quiz", isLoggedIn, (req, res, next) => {
   res.render("quiz", { user: req.user})
@@ -16,18 +98,35 @@ router.get("/quiz", isLoggedIn, (req, res, next) => {
   
   
 });
-
+// router.post("/addFavorites", (req, res, next) => {
+//   const { seriesID } = req.body;
+//   const { _id: userID } req.user;
+//   User.findById({ userID })
+//     .then(user => {
+//       if (user) {
+//         const { favorites } = user;
+//         if (!favorites.includes(seriesID)) {
+//           User.findByIdAndUpdate(
+//             userID,
+//             { $push: {favorites: seriesID}}, {new: true}
+//           )
+//             .then((user) => res.redirect("/private/profile"))
+//           .catch(error => next(error))
+//         }
+//     }
+//   }) 
+// })
 router.get("/searchbar",(req, res) => {
   res.render("search")
 })
 router.get("/search", (req, res) => {
   
-  console.log(req.query.serie);
-  const series = req.query.serie;
-  Series.findOne({ title: { $regex: `.*(?i)${series}.*` } })
+  
+  const { search } = req.query;
+  Series.findOne({ title: { $regex: `.*(?i)${search}.*` } })
     .then((series) => {
-      console.log(series);
-      res.render("movie-details", { series });
+      
+      res.render("series", { series, search, user: req.user });
     })
     .catch((error) => console.error(error));
 });
@@ -66,8 +165,11 @@ router.post("/recommendations", isLoggedIn, (req, res) => {
 
 router.get("/feed", isLoggedIn, (req, res) => {
   Post.find({}).sort({date:-1})
-   .populate("user_id")
+    .populate("user_id")
+    
+    
     .then(posts => {
+      // const ownPosts = posts.map(x =>x.user = req.user._id)
       res.render('feed', {posts, user: req.user})//
     })
     .catch(error => console.error(error))

@@ -7,14 +7,14 @@ const router = express.Router();
 const saltRounds = 10;
 
 router.get("/signup", isLoggedOut, (req, res) => {
-  res.render("signup");
+  res.render("auth/signup");
 });
 
 router.post("/signup", (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
-    res.render("signup", {
+    res.render("auth/signup", {
       errorMessage: "Username and password are required.",
     });
   }
@@ -23,14 +23,14 @@ router.post("/signup", (req, res) => {
   // regularExpresion.test(password)
 
   if (password.length < 3) {
-    res.render("signup", {
+    res.render("auth/signup", {
       errorMessage: "Password should have at least 3 characters",
     });
   }
 
   User.findOne({ username }).then((user) => {
     if (user) {
-      return res.render("signup", { errorMessage: "User already exists." });
+      return res.render("auth/signup", { errorMessage: "User already exists." });
     }
 
     const salt = bcrypt.genSaltSync(saltRounds);
@@ -43,12 +43,12 @@ router.post("/signup", (req, res) => {
           if (error) {
             next(error);
           }
-          return res.redirect("/private/quiz");
+          return res.redirect("/private/profile");
         });
       })
       .catch((error) => {
         console.log(error);
-        return res.render("signup", {
+        return res.render("auth/signup", {
           errorMessage: "Server error. Try again.",
         });
       });
@@ -56,7 +56,7 @@ router.post("/signup", (req, res) => {
 });
 
 router.get("/login", isLoggedOut, (req, res) => {
-  res.render("login");
+  res.render("auth/login");
 });
 
 router.post(

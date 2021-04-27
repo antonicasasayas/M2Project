@@ -8,6 +8,14 @@
 <div id="movie-container">
 
 </div>
+<h3>Favorites</h3>
+{{#each user.favorites}}
+<a href="/series/{{id}}">
+  <img src="{{image}}" alt="" style='width: 250px;'>
+  <p>{{title}}</p>
+</a>
+{{/each}}
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="/javascripts/script.js"></script>

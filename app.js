@@ -139,8 +139,8 @@ module.exports = app;
 //   url: "https://movie-database-imdb-alternative.p.rapidapi.com/",
 //   params: { i: "tt4154796", r: "json" },
 //   headers: {
-//     "x-rapidapi-key": "847fb68c6fmshe4818651a4d804ep13a21djsn36682c9c927c",
-//     "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
+//     "x-rapidapi-key": process.env.RAPIDAPIKEY,
+//     "x-rapidapi-host": process.env.RAPIDHOST
 //   },
 // };
 

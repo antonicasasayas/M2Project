@@ -8,9 +8,7 @@ const seriesSchema = new Schema({
   year: { type: String },
   genre: String,
   plot: { type: String },
-  image: { type: String },
-  likes: [{ type: Schema.Types.ObjectId, ref: "User" }],
-  watch: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  image: { type: String }
 });
 
 const Series = mongoose.model("Series", seriesSchema);

@@ -1,19 +1,22 @@
-<h1>Hello! Please answer these questions so we can suggest you series according to your likes.</h1>
-
-<form action="/private/recommendations" method="POST">
-
-
- <label for="comedy">Comedy</label>
-<input type="checkbox" name="comedy"> 
- <label for="drama">Drama</label>
-<input type="checkbox" name="drama"> 
-<label for="action">Action</label>
-<input type="checkbox" name="action"> 
- 
-
-
-
-
-<button type="submit"  class="btn btn-primary">Submit</button>
-</form>
-
+<div class="quiz">
+  <form action="/private/recommendations" method="POST">
+    <div class="container2">
+      <ul class="ks-cboxtags">
+        <li><input type="checkbox" id="checkboxOne" name="action"><label for="checkboxOne">Action</label></li>
+        <li><input type="checkbox" id="checkboxTwo" name="comedy"><label for="checkboxTwo">Comedy</label></li>
+        <li><input type="checkbox" id="checkboxThree" name="drama"><label for="checkboxThree">Drama</label></li>
+        <li><input type="checkbox" id="checkboxFour" name="mystery"><label for="checkboxFour">Mystery</label></li>
+        <li><input type="checkbox" id="checkboxFive" name="thriller"><label for="checkboxFive">Thriller</label></li>
+        <li><input type="checkbox" id="checkboxSix" name="adventure"><label for="checkboxSix">Adventure</label></li>
+        <li><input type="checkbox" id="checkboxSeven" name="horror"><label for="checkboxSeven">Horror</label></li>
+        <li><input type="checkbox" id="checkboxEight" name="romance"><label for="checkboxEight">Romance</label></li>
+        <li><input type="checkbox" id="checkboxNine" name="crime"><label for="checkboxNine">Crime</label></li>
+        <li><input type="checkbox" id="checkboxTen" name="western"><label for="checkboxTen">Western</label></li>
+        <li><input type="checkbox" id="checkboxTwelve" name="animation"><label for="checkboxTwelve">Animation</label>
+        </li>
+        <li><input type="checkbox" id="checkboxThirteen" name="family"><label for="checkboxThirteen">Family</label></li>
+      </ul>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

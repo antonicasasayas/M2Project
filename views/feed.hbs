@@ -1,42 +1,59 @@
-
-
 <!-- Main Body -->
+
 <section class="feed">
+
   <div class="container">
+    <div class="notifications">
+      <h3>Notifications</h3>
+      {{#each users}}
+      <p id="white">{{username}}</p>
+      <hr>
+      {{#each favorites}}
+
+
+      <p id="white2"> <i class="fas fa-heart"></i> {{title}}</p>
+      {{/each}}
+
+      {{/each}}
+    </div>
     <div class="row justify-content-center">
+
       <div class="col-sm-5 col-md-8 col-12 pb-4 mt-5">
-        
+
         <div class="col-lg-8 col-md-5 col-sm-4  offset-md-2 offset-sm-1 col-12 mt-10">
+          <h3 id="main-title">Comment something</h3>
           <form action="/private/feed" method="POST" id="algin-form">
             <div class="form-group">
-                <textarea name="content" id="tweet" msg cols="30"
-                rows="5" class="form-control" style="background-color: #14181c;"></textarea>
+              <textarea name="content" id="tweet" msg cols="30" rows="5" class="form-control"
+                style="background-color: #14181c;"></textarea>
             </div>
-        
-        
+
+
             <div class="form-group"> <button type="submit" id="post" class="btn">Post </button> </div>
           </form>
         </div>
-        {{#each posts}}
-        
-        <div id="comments" class="text-justify darker mt-5 float-right "> <img src="https://i.imgur.com/CFpa3nK.jpg" alt=""
-            class="rounded-circle" width="40" height="40">
-          <h4>{{user_id.username}}</h4> <span></span> <br> 
-          <p id="comment">{{content}}</p>
-          
 
-          <form style="margin: 0; padding: 0;"id="editbtn" action="/private/{{id}}/edit" method="GET">
-          <button class= "btn btn-dark" id="editbutton"href="/private/{{id}}/edit">Edit</button>
+        {{#each posts}}
+
+        <div id="comments" class="text-justify darker mt-5 float-right "> 
+          <img src="https://i.imgur.com/CFpa3nK.jpg"
+           alt="" class="rounded-circle" width="40" height="40">
+          <h4>{{user_id.username}}</h4> <span></span> <br>
+          <p id="comment">{{content}}</p>
+
+          {{!-- {{#if this.isEditable}} --}}
+          <form style="margin: 0; padding: 0;" id="editbtn" action="/private/{{id}}/edit" method="GET">
+            <button class="btn btn-dark" id="editbutton" href="/private/{{id}}/edit">Edit</button>
           </form>
-          
+
           <form style="margin: 0; padding: 0;" id="delbtn" action="/private/{{id}}/delete" method="POST">
             <button class="btn btn-dark" id="deletebutton" type="submit">Delete</button>
           </form>
         </div>
-        
+        {{!-- {{/if}} --}}
         {{/each}}
       </div>
-     
+
     </div>
   </div>
 </section>
@@ -51,4 +68,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="/javascripts/apiHandler.js"></script>
-<script src="/javascripts/index.js"></script>
+<script src="/javascripts/script.js"></script>

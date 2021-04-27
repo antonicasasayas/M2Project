@@ -1,5 +1,7 @@
 class APIHandler {
-  
+  constructor(baseURL) {
+    this.baseURL = baseURL;
+  }
 
   getPosts() {
     return axios.get(`localhost:3000/private/feed`);
@@ -9,7 +11,7 @@ class APIHandler {
     return axios.delete(`${this.baseURL}/students/${id}`);
   }
 
-  likeSeries(id) {
-    return axios.post(`localhost:3000/private/`);
+  getUsers() {
+    return axios.get(`${this.baseURL}/private/feed-json`)
   }
 }

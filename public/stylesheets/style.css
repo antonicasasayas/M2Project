@@ -190,4 +190,41 @@ width:570px;
   height: 50px;
 }
 
+#white{
+  color:gold;
+  display: inline-block;
+  margin: 0;
+}
+
+#white2{
+  display: inline-block;
+  color:white;
+  margin: 0;
+  height: 30px;
+}
+.notifications{
+  
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+
+}
+.notifications p{
+  width: 300px;
+}
+hr{
+  color:white;
+}
+
+h3{
+  color:white;
+  padding-bottom: 50px;
+}
+
+#main-title{
+  padding-bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

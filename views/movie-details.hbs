@@ -1,10 +1,12 @@
 <h1>{{series.title}}</h1>
 <p>{{series.plot}}</p>
 <p>{{series.actors}}</p>
+<p>{{series.genre}}</p>
 <img src={{series.image}} alt="">
 
 
-{{#if showWishlist}}
+
+
 {{#if addWishlist}}
 <form action="/private/add-favorites" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
@@ -13,9 +15,22 @@
 {{/if}}
 {{!-- Game added to user wishlist --}}
 {{#unless addWishlist}}
-<form action="/private/add-favorites" method="POST">
+<form action="/private/remove-favorites" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
   <button type="submit"><i class="fas fa-heart"></i></button>
 </form>
 {{/unless}}
+
+{{#if addWatchlist}}
+<form action="/private/add-watchlist" method="POST">
+  <input type="hidden" name="seriesID" value="{{series._id}}">
+  <button type="submit"><i class="far fa-heart"></i></button>
+</form>
 {{/if}}
+{{!-- Game added to user wishlist --}}
+{{#unless addWatchlist}}
+<form action="/private/remove-watchlist" method="POST">
+  <input type="hidden" name="seriesID" value="{{series._id}}">
+  <button type="submit"><i class="fas fa-heart"></i></button>
+</form>
+{{/unless}}

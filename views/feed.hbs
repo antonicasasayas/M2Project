@@ -18,7 +18,7 @@
     </div>
     <div class="row justify-content-center">
 
-      <div class="col-sm-5 col-md-8 col-12 pb-4 mt-5">
+      <div id= "centercol" class="col-sm-5 col-md-8 col-12 pb-4 mt-5">
 
         <div class="col-lg-8 col-md-5 col-sm-4  offset-md-2 offset-sm-1 col-12 mt-10">
           <h3 id="main-title">Comment something</h3>
@@ -32,7 +32,7 @@
             <div class="form-group"> <button type="submit" id="post" class="btn">Post </button> </div>
           </form>
         </div>
-
+        
         {{#each posts}}
 
         <div id="comments" class="text-justify darker mt-5 float-right "> 
@@ -40,16 +40,18 @@
            alt="" class="rounded-circle" width="40" height="40">
           <h4>{{user_id.username}}</h4> <span></span> <br>
           <p id="comment">{{content}}</p>
-
+          <div>
           {{#if this.isEditable}}
-          <form style="margin: 0; padding: 0;" id="editbtn" action="/private/{{id}}/edit" method="GET">
-            <button class="btn btn-dark" id="editbutton" href="/private/{{id}}/edit">Edit</button>
+          <form style="margin: 0; padding: 0;" id="editbtn" action="/private/{{_id}}/edit" method="GET">
+            <button class="btn btn-dark" id="editbutton" href="/private/{{_id}}/edit">Edit</button>
           </form>
 
-          <form style="margin: 0; padding: 0;" id="delbtn" action="/private/{{id}}/delete" method="POST">
+          <form style="margin: 0; padding: 0;" id="delbtn" action="/private/{{_id}}/delete" method="POST">
             <button class="btn btn-dark" id="deletebutton" type="submit">Delete</button>
           </form>
-        </div>
+          </div>
+          </div>
+        
         {{/if}}
         {{/each}}
       </div>

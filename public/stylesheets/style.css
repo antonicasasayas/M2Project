@@ -122,7 +122,9 @@ label {
 .form-group p a {
   color: white
 }
-
+#centercol{
+  height: 2000px;
+}
 #checkbx {
   background-color: #14181c
 }
@@ -148,15 +150,18 @@ form {
 #comments{
 margin-right: 142px;
 width:570px;
+height: 200px;
+
 }
 
 #delbtn{
-  background-color: #14181c;
+  background: none;
   border: none;
 }
 
 #comment{
   padding-top:15px;
+  
 }
 .feed{
   background:linear-gradient(#20272e, #14181c);
@@ -170,13 +175,15 @@ width:570px;
   margin-top: 10px;
 }
 #editbtn {
-  background-color: #14181c;
+  background:none;
   border: none;
+  display: inline;
   
 }
 
 #editbutton{
   margin-left: 467px;
+  display: inline;
 }
 
 #post.btn{
@@ -259,7 +266,7 @@ h3{
 }
 
 #navbarNavAltMarkup {
-  background-color: #14181c;
+  background-color: red;
   color: white;
 }
 

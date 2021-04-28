@@ -220,7 +220,7 @@ router.get("/feed", isLoggedIn, (req, res) => {
         if (String(posts[i].user_id._id) === String(req.user.id)) {
           
           posts[i].isEditable = true;
-          console.log(posts[i]);
+          
           }
       }
       
@@ -233,7 +233,7 @@ router.get("/feed", isLoggedIn, (req, res) => {
         .then((users) => {
           
           Series.find({}).then((series) => {
-            console.log(posts)
+            
             res.render("feed", {
               
               series,

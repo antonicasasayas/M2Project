@@ -1,7 +1,7 @@
-<h1>Here's a list of films you will love</h1>
+<h1>Just for you</h1>
 
 {{#each series}}
-<h2>{{title}}</h2>
+{{!-- <h2>{{title}}</h2>
 <h3>{{actors}}</h3>
 <img src={{image}} alt=>
 par
@@ -9,31 +9,31 @@ par
   
 <form   action="/private/recommendations" method="POST">
   <button class="btn btn-dark" id="likebtn" ><i class="fas fa-heart"></i></button>
-</form>
+</form> --}}
 
 <div class="movie_card" id="bright">
   <div class="info_section">
     <div class="movie_header">
-      <img class="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg" />
-      <h1>{{title}}</h1>
-      <h4>{{genre}}</h4>
-      <span class="minutes">{{rating}}</span>
-      <p class="type">{{year}}</p>
+      <img class="locandina" src="{{image}}" />
+      <h2 id="blanc">{{title}}</h2>
+      <h9 id="any">{{year}}</h9>
+      <span id="nota" class="minutes">{{rating}}</span>
+      <p id="generes"class="type">{{genre}}</p>
     </div>
     <div class="movie_desc">
       <p class="text">
         {{plot}}
       </p>
     </div>
-    <div class="movie_social">
+    {{!-- <div class="movie_social">
       <ul>
         <li><i class="material-icons">share</i></li>
         <li><i class="material-icons"></i></li>
         <li><i class="material-icons">chat_bubble</i></li>
       </ul>
-    </div>
+    </div> --}}
   </div>
-  <div class="blur_back bright_back"></div>
+  <div class="blur_back bright_back"><img src="{{image}}" height = "500" width = "400" style="margin-left: 300px;" alt=""></div>
 </div>
 {{/each}}
 

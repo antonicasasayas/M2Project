@@ -1,4 +1,5 @@
 const express = require("express");
+const { QueryCursor } = require("mongoose");
 const { serializeUser } = require("passport");
 const { isLoggedIn } = require("../middlewares");
 const router = express.Router();
@@ -174,38 +175,24 @@ router.get("/recommendations-json", (req, res) => {
     .catch((error) => console.error(error));
 });
 
-router.post("/recommendations", isLoggedIn, async (req, res) => {
-  const {
-    comedy,
-    action,
-    drama,
-    mystery,
-    thriller,
-    adventure,
-    horror,
-    romance,
-    crime,
-    western,
-    animation,
-    family,
-  } = req.body;
-
-   const arrayOfGenres = [comedy, action, drama, mystery, thriller, adventure, horror, romance, crime, western, animation, family ];
- 
+router.post("/recommendations", isLoggedIn,  (req, res) => {
+  const query = Object.keys(req.body).join(" ");
+  console.log(query)
   console.log(req.body)
+
+  Series.find({ genre: { $regex: `.*(?i)${query}.*` } })
+    .then((series) => {
+      res.render("recommendations", { series });
+    })
+    .catch((error) => console.error(error));
   
-  const NewArrayCreated = [];
+  
+  
  
-  arrayOfGenres.forEach(async (element) => {
-    if (element in req.body) {
-      let item = await Series.find({
-        genre: { $regex: `.*(?i)${element}.*` }
-      })
-      NewArrayCreated.push(item)
-    }
-  })
-  console.log(NewArrayCreated)
-    res.render("recommendations", {NewArrayCreated})
+  
+      
+ 
+    
   })
 
 
@@ -231,7 +218,7 @@ router.get("/feed", isLoggedIn, (req, res) => {
       User.find({favorites : { $exists: true}, $where:"this.favorites.length > 0"})
 
         .populate("favorites")
-      
+        .populate("watchlist")
 
         .then((users) => {
           

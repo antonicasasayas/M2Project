@@ -24,13 +24,13 @@
 {{#if addWatchlist}}
 <form action="/private/add-watchlist" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><i class="far fa-heart"></i></button>
+  <button type="submit"><<i class="far fa-eye"></i></button>
 </form>
 {{/if}}
 {{!-- Game added to user wishlist --}}
 {{#unless addWatchlist}}
 <form action="/private/remove-watchlist" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><i class="fas fa-heart"></i></button>
+  <button type="submit"><i class="fas fa-eye"></i></button>
 </form>
 {{/unless}}

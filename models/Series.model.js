@@ -8,7 +8,8 @@ const seriesSchema = new Schema({
   year: { type: String },
   genre: String,
   plot: { type: String },
-  image: { type: String }
+  image: { type: String },
+  watchlist: Number,
 });
 
 const Series = mongoose.model("Series", seriesSchema);

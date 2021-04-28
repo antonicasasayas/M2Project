@@ -38,6 +38,7 @@ router.get("/series/:id", (req, res, next) => {
 router.post("/add-favorites", (req, res, next) => {
   const { seriesID } = req.body;
   const { _id: userID } = req.user;
+  
   User.findById(userID)
     .then((user) => {
       if (user) {
@@ -172,40 +173,42 @@ router.get("/recommendations-json", (req, res) => {
     })
     .catch((error) => console.error(error));
 });
-// $or:  })[], })
-// { genre: { $regex: `.*${drama}.*` } },
-// { genre: { $regex: `.*${action}.*` } }
-router.post("/recommendations", isLoggedIn, (req, res) => {
-  const { comedy, action, drama } = req.body;
-  //  Series.find({or:[{ genre: { $regex: `.*${comedy}.*`} },{ genre: { $regex: `.*${comedy}.*`]})
-  Series.find({
-    $or: [
-      { genre: { $regex: `.*${comedy}.*` } },
-      { genre: { $regex: `.*${action}.*` } },
-      { genre: { $regex: `.*${drama}.*` } },
-    ],
-  })
-    .sort({ rating: -1 })
-    // filter("rating":NaN)
-    // Series.find({$text: { $search: "Comedy"}}).sort({"rating":-1}).limit(3)
-    //  Series.find().sort({"rating":-1})
-    .then((comedies) => {
-      console.log(`These are the ${comedies}`);
-      res.render("recommendations", { comedies });
-    })
-    .catch((error) => console.error(error));
-});
-// router.get("/feed-json", (req, res) => {
-//   Post.find({})
-//     .sort({ date: -1 })
-//     .populate("user_id")
 
-//     .then((users) => {
-      
-//       res.json("feed", { users }); //
-//     })
-//     .catch((error) => console.error(error));
-// });
+router.post("/recommendations", isLoggedIn, async (req, res) => {
+  const {
+    comedy,
+    action,
+    drama,
+    mystery,
+    thriller,
+    adventure,
+    horror,
+    romance,
+    crime,
+    western,
+    animation,
+    family,
+  } = req.body;
+
+   const arrayOfGenres = [comedy, action, drama, mystery, thriller, adventure, horror, romance, crime, western, animation, family ];
+ 
+  console.log(req.body)
+  
+  const NewArrayCreated = [];
+ 
+  arrayOfGenres.forEach(async (element) => {
+    if (element in req.body) {
+      let item = await Series.find({
+        genre: { $regex: `.*(?i)${element}.*` }
+      })
+      NewArrayCreated.push(item)
+    }
+  })
+  console.log(NewArrayCreated)
+    res.render("recommendations", {NewArrayCreated})
+  })
+
+
 
 router.get("/feed", isLoggedIn, (req, res) => {
   

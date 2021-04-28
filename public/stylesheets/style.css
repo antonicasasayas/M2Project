@@ -148,9 +148,11 @@ form {
   padding: 20px
 }
 #comments{
-margin-right: 142px;
+
 width:570px;
 height: 200px;
+margin-right: 140px;
+
 
 }
 
@@ -162,9 +164,11 @@ height: 200px;
 #comment{
   padding-top:15px;
   
+  
 }
 .feed{
   background:linear-gradient(#20272e, #14181c);
+  height: 100%;
 }
 #tweet{
   color:white;
@@ -177,7 +181,7 @@ height: 200px;
 #editbtn {
   background:none;
   border: none;
-  display: inline;
+  
   
 }
 
@@ -212,7 +216,7 @@ height: 200px;
 .notifications{
   
   position: absolute;
-  top: 200px;
+  top: 100px;
   left: 20px;
   display: flex;
   flex-direction: column;

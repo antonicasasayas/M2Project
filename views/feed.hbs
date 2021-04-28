@@ -7,6 +7,7 @@
       <h3>Notifications</h3>
       {{#each users}}
       <p id="white">{{username}}</p>
+      
       <hr>
       {{#each favorites}}
 
@@ -53,6 +54,17 @@
           </div>
         
         {{/if}}
+        {{#unless this.isEditable}}
+          <form style="margin: 0; padding: 0;" id="editbtn" action="/private/{{_id}}/edit" method="GET">
+            <button  style="display: none;" class="btn btn-dark" id="editbutton" href="/private/{{_id}}/edit">Edit</button>
+          </form>
+          
+          <form style="margin: 0; padding: 0;"  id="delbtn" action="/private/{{_id}}/delete" method="POST">
+            <button style="display: none;" class="btn btn-dark" id="deletebutton" type="submit">Delete</button>
+          </form>
+          </div>
+          </div>
+        {{/unless}}
         {{/each}}
       </div>
 
@@ -60,13 +72,7 @@
   </div>
 </section>
 
-{{!-- <form action="/private/feed" method="POST">
 
-  <label for="Comment">Comment:</label>
-  <input type="text" name="content">
-
-  <button class="createPost" type="submit">Crear</button>
-</form> --}}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="/javascripts/apiHandler.js"></script>

@@ -217,7 +217,7 @@ body {
 html,
 body {
   margin: 0;
-  background: black;
+  background: #20272e;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -386,13 +386,13 @@ body {
 }
 
 #bright {
-  -webkit-box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-          box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 150px -45px gold;
+          box-shadow: 0px 0px 150px -45px gold;
 }
 
 #bright:hover {
-  -webkit-box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-          box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 120px -55px gold;
+          box-shadow: 0px 0px 120px -55px gold;
 }
 
 #tomb {
@@ -482,7 +482,7 @@ a {
 }
 
 body {
-  background-color: white;
+  background-color: #20272e;
 }
 
 #nav-items li a,
@@ -603,7 +603,6 @@ form {
 .feed {
   background: -webkit-gradient(linear, left top, left bottom, from(#20272e), to(#14181c));
   background: linear-gradient(#20272e, #14181c);
-  height: 100%;
 }
 
 #tweet {
@@ -859,7 +858,8 @@ ul.social-network li {
 /* QUIZ */
 .quiz {
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(#20272e), to(#14181c));
+  background: linear-gradient(#20272e, #14181c);
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
@@ -870,9 +870,6 @@ ul.social-network li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container2 {
@@ -988,7 +985,7 @@ a {
 html,
 body {
   margin: 0;
-  background: white;
+  background: #20272e;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1185,7 +1182,7 @@ body {
 html,
 body {
   margin: 0;
-  background: black;
+  background: #20272e;
   font-family: 'Montserrat', helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -1354,13 +1351,13 @@ body {
 }
 
 #bright {
-  -webkit-box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 150px -45px white;
+  box-shadow: 0px 0px 150px -45px white;
 }
 
 #bright:hover {
-  -webkit-box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 120px -55px white;
+  box-shadow: 0px 0px 120px -55px white;
 }
 
 #tomb {
@@ -1450,7 +1447,7 @@ a {
 }
 
 body {
-  background-color: white;
+  background-color: #20272e;
 }
 
 #nav-items li a,
@@ -1571,7 +1568,6 @@ form {
 .feed {
   background: -webkit-gradient(linear, left top, left bottom, from(#20272e), to(#14181c));
   background: linear-gradient(#20272e, #14181c);
-  height: 100%;
 }
 
 #tweet {
@@ -1827,7 +1823,8 @@ ul.social-network li {
 /* QUIZ */
 .quiz {
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(#20272e), to(#14181c));
+  background: linear-gradient(#20272e, #14181c);
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
@@ -1840,7 +1837,6 @@ ul.social-network li {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
 }
 
 .container2 {
@@ -1956,7 +1952,6 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 main {
   background-color: #20272e;
-  height: 2000px;
 }
 
 .fav {
@@ -2025,6 +2020,186 @@ main {
 }
 
 .border {
+  border-radius: 10px;
+}
+
+#margin-title {
+  margin: 40px;
+  text-align: center;
+}
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+}
+
+hr.style-one {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+
+.movie_card {
+  color: white;
+}
+
+#quiz-form {
+  background: none;
+  border: none;
+}
+
+#quiz-title {
+  text-align: center;
+  margin: 40px;
+}
+
+/* QUIZ */
+.quiz {
+  height: 750px;
+  background-image: url("/images/dadooscuro.jpg");
+  background-position: cover;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 640px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+ul.ks-cboxtags {
+  list-style: none;
+  padding: 20px;
+  width: 500px;
+}
+
+ul.ks-cboxtags li {
+  display: inline;
+}
+
+ul.ks-cboxtags li label {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 0px solid white;
+  color: #857d7d;
+  border-radius: 2px;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+ul.ks-cboxtags li label {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+ul.ks-cboxtags li label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f067";
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+  border: 2px solid #e6e6e6;
+  background-color: #384450;
+  color: white;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+  border: 2px solid white;
+}
+/* TONI Dimecres Nit: quiz */
+#quizForm {
+  border-width: 0ch;
+  /* //Linia 572// */
+}
+
+h2 {
+  color: #959595;
+}
+
+.box {
+  background-color: #0d131b;
+  border-width: 0ch;
+}
+
+#quizButton {
+  background-color: gold;
+  border-width: 0ch;
+  width: 200px;
+  height: 40px;
+  color: #20272e;
+  font-family: "Lucida Grande";
+}
+
+#labels1 {
   border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

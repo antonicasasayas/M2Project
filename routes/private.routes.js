@@ -166,9 +166,9 @@ router.post("/recommendations", isLoggedIn,  (req, res) => {
   console.log(query)
   console.log(req.body)
 
-  Series.find({ genre: { $regex: `.*(?i)${query}.*` } }).limit(2)
+  Series.find({ genre: { $regex: `.*(?i)${query}.*` } }).sort({rating:-1}).limit(10)
     .then((series) => {
-      res.render("recommendations", { series });
+      res.render("recommendations", { user:req.user , series });
     })
     .catch((error) => console.error(error));
   

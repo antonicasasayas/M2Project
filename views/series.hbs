@@ -1,8 +1,25 @@
+
 {{#each series}}
 
-<h1>{{title}}</h1>
-<p>{{plot}}</p>
-<p>{{actors}}</p>
-<img src={{image}} alt="">
-<a href="/private/series/{{_id}}">Movie Details</a>
+<a href="/private/series/{{_id}}">
+<div class="movie_card" id="bright">
+  <div class="info_section">
+    <div class="movie_header">
+      <img class="locandina" src="{{image}}" />
+      <h2 id="blanc">{{title}}</h2>
+      <h9 id="any">{{year}}</h9>
+      <span id="nota" class="minutes">{{rating}}</span>
+      <p id="generes" class="type">{{genre}}</p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+        {{plot}}
+      </p>
+    </div>
+    
+  </div>
+  <div class="blur_back bright_back"><img src="{{image}}" height="500" width="400" style="margin-left: 300px;" alt="">
+  </div>
+</div>
+</a>
 {{/each}}

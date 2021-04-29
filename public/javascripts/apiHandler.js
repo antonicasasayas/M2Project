@@ -4,14 +4,12 @@ class APIHandler {
   }
 
   getPosts() {
-    return axios.get(`localhost:3000/private/feed`);
+    return axios.get(`localhost:3000/private/feed-json`);
   }
 
   deletePosts(id) {
     return axios.delete(`${this.baseURL}/students/${id}`);
   }
 
-  getUsers() {
-    return axios.get(`${this.baseURL}/private/feed-json`)
-  }
+  
 }

@@ -11,9 +11,19 @@ router.get("/profile", isLoggedIn, (req, res, next) => {
   User.findById(id)
     .populate("favorites")
     .then((user) => {
-      res.render("profile", { user });
+      res.render("profile", { user: req.user });
     });
 });
+
+router.get("/feed-json", (req, res) => {
+  Post.find({})
+    .then(posts => {
+      console.log(posts)
+      res.json(posts)
+      
+    })
+  .catch(error => console.error(error))
+})
 
 router.get("/series/:id", (req, res, next) => {
   const { id } = req.params;
@@ -160,7 +170,7 @@ router.get("/searchbar", (req, res) => {
 });
 router.get("/search", (req, res) => {
   const { search } = req.query;
-  Series.findOne({ title: { $regex: `.*(?i)${search}.*` } })
+  Series.find({ title: { $regex: `.*(?i)${search}.*` } })
     .then((series) => {
       res.render("series", { series, search, user: req.user });
     })
@@ -180,7 +190,7 @@ router.post("/recommendations", isLoggedIn,  (req, res) => {
   console.log(query)
   console.log(req.body)
 
-  Series.find({ genre: { $regex: `.*(?i)${query}.*` } })
+  Series.find({ genre: { $regex: `.*(?i)${query}.*` } }).limit(2)
     .then((series) => {
       res.render("recommendations", { series });
     })

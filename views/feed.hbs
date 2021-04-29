@@ -5,10 +5,12 @@
   <div class="container">
     <div class="notifications">
       <h3 id="not-title">Notifications</h3>
+      
       {{#each users}}
+      <hr class="style-two">
       <p id="white">{{username}}</p>
       
-      <hr>
+      
       {{#each favorites}}
 
 
@@ -18,12 +20,14 @@
 
       {{/each}}
     </div>
+    
     <div class="row justify-content-center">
 
       <div id= "centercol" class="col-sm-5 col-md-8 col-12 pb-4 mt-5">
 
         <div class="col-lg-8 col-md-5 col-sm-4  offset-md-2 offset-sm-1 col-12 mt-10">
           <h3 id="main-title">Comment something</h3>
+          <hr class="style-two">
           <form action="/private/feed" method="POST" id="algin-form">
             <div class="form-group">
               <textarea name="content" id="tweet" msg cols="30" rows="5" class="form-control"
@@ -69,11 +73,12 @@
         {{/each}}
       </div>
       <div class= "watch-column">
-        <h3>Watchlist</h3>
+        <h3 id= "lol">Watchlist</h3>
       {{#each users}}
+      <hr class="style-two">
       <p id="white">{{username}}</p>
       
-      <hr>
+      
         {{#each watchlist}}
         <p id="white2"> <i class="fas fa-eye"></i> {{title}}</p>
         {{/each}}

@@ -2,32 +2,36 @@
 
 window.onload = () => {
   const apiHandler = new APIHandler('http://localhost:3000');
-
-  const like= document.querySelectorAll(".like")
-  const buttons = document.querySelectorAll('.deletePost');//
-  const container = document.querySelector('#posts');
+  apiHandler.getPosts()
+    .then(response => {
+    console.log(response)
+    })
+  .catch(error => console.error(error))
+ 
+  // const buttons = document.querySelectorAll('.deletePost');//
+  // const container = document.querySelector('#posts');
 
   
-  buttons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      const id = e.target.children[0].innerHTML;
-      apiHandler.deletePosts(id).then(() => {
-        apiHandler.getPosts()
-          .then(res => {
-            container.innerHTML = '';
-            res.data.forEach(post => {
-              container.innerHTML += `
-              <h3>${post.content}</h3>
-              <h9>${post.date}</h9>
+  // buttons.forEach(button => {
+  //   button.addEventListener('click', (e) => {
+  //     const id = e.target.children[0].innerHTML;
+  //     apiHandler.deletePosts(id).then(() => {
+  //       apiHandler.getPosts()
+  //         .then(res => {
+  //           container.innerHTML = '';
+  //           res.data.forEach(post => {
+  //             container.innerHTML += `
+  //             <h3>${post.content}</h3>
+  //             <h9>${post.date}</h9>
              
-             <a href="/private/{{id}}/edit">Edit comment</a>
-             <button class="deletePost" type="submit">Delete</button>
-              `
-            })
-          })
-      })
-    })
-  })
+  //            <a href="/private/{{id}}/edit">Edit comment</a>
+  //            <button class="deletePost" type="submit">Delete</button>
+  //             `
+  //           })
+  //         })
+  //     })
+  //   })
+  // })
 }
 
 // the selector will match all input controls of type :checkbox
@@ -47,3 +51,4 @@ window.onload = () => {
 //     $box.prop("checked", false);
 //   }
 // });
+

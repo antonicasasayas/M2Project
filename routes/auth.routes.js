@@ -43,7 +43,7 @@ router.post("/signup", (req, res) => {
           if (error) {
             next(error);
           }
-          return res.redirect("/private/profile");
+          return res.redirect("/private/feed");
         });
       })
       .catch((error) => {
@@ -62,7 +62,7 @@ router.get("/login", isLoggedOut, (req, res) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/private/quiz",
+    successRedirect: "/private/feed",
     failureRedirect: "/auth/login",
     passReqToCallback: true,
   })

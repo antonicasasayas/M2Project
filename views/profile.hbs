@@ -1,19 +1,16 @@
 <h1>Welcome {{user.username}}</h1>
+
 <a class="nav-link" href="/auth/logout">Logout</a>
-
-<input type="text" id="movie-input">
-<button id="get-movie-button">Get movie!</button>
-<p id="error-message"></p>
-
-<div id="movie-container">
 
 </div>
 <h3>Favorites</h3>
 {{#each user.favorites}}
+
 <a href="/series/{{id}}">
   <img src="{{image}}" alt="" style='width: 250px;'>
   <p>{{title}}</p>
 </a>
+
 {{/each}}
 
 

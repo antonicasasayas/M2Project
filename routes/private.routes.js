@@ -6,22 +6,7 @@ const router = express.Router();
 const Post = require("../models/Post.model");
 const Series = require("../models/Series.model");
 const User = require("../models/User.model");
-router.get("/:id", isLoggedIn, (req, res, next) => {
-  
-  User.findById(req.user._id)
-    .populate("favorites")
-    .then((user) => {
-      res.render("profile", { user });
-      // Series.find({})
-      //   .then(series => {
-      //   res.render("profile", { series, user });
-      //   })
-      
-      // .catch(error => console.error(error))
-    })
-    .catch(error => console.error(error))
-})
-  
+
 
 router.get("/feed-json", (req, res) => {
   Post.find({})
@@ -155,24 +140,7 @@ router.post("/remove-watchlist", (req, res, next) => {
 router.get("/quiz", isLoggedIn, (req, res, next) => {
   res.render("quiz", { user: req.user });
 });
-// router.post("/addFavorites", (req, res, next) => {
-//   const { seriesID } = req.body;
-//   const { _id: userID } req.user;
-//   User.findById({ userID })
-//     .then(user => {
-//       if (user) {
-//         const { favorites } = user;
-//         if (!favorites.includes(seriesID)) {
-//           User.findByIdAndUpdate(
-//             userID,
-//             { $push: {favorites: seriesID}}, {new: true}
-//           )
-//             .then((user) => res.redirect("/private/profile"))
-//           .catch(error => next(error))
-//         }
-//     }
-//   })
-// })
+
 router.get("/searchbar", (req, res) => {
   res.render("search");
 });
@@ -295,5 +263,20 @@ router.post("/:id/edit", (req, res) => {
     })
     .catch((error) => console.error(error));
 });
+router.get("/profile", isLoggedIn, (req, res, next) => {
+  User.findById(req.user._id)
+    .populate("favorites")
+    .populate("watchlist")
+    .then((user) => {
+      res.render("profile", { user });
+      // Series.find({})
+      //   .then(series => {
+      //   res.render("profile", { series, user });
+      //   })
 
+      // .catch(error => console.error(error))
+    })
+    .catch((error) => console.error(error));
+});
+  
 module.exports = router;

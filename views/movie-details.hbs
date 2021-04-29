@@ -1,36 +1,70 @@
+<nav id="nav1" class="navbar navbar-expand-lg  ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="/images/Time LY. (4).png" width="200" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/auth/logout">Log Out</a>
+        <a class="nav-link" href="/private/profile">Profile</a>
+        <a class="nav-link" href="/private/feed">Feed</a>
+        <a class="nav-link" href="/private/quiz">Quiz</a>
+        <a class="nav-link" href="/private/searchbar">Search</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="details">
+  <img class="border" src={{series.image}} alt="">
+  <div class="data">
 <h1>{{series.title}}</h1>
-<p>{{series.plot}}</p>
-<p>{{series.actors}}</p>
+<hr class="style-two">
 <p>{{series.genre}}</p>
-<img src={{series.image}} alt="">
-
-
-
-
+<p>{{series.actors}}</p>
+<p>{{series.plot}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis illum voluptate eius, necessitatibus sed, quidem consectetur doloribus quisquam voluptatibus repellendus! Laudantium vero corporis adipisci magnam, assumenda eaque excepturi eum!
+Quas autem odit dolore obcaecati nobis illo delectus aperiam harum incidunt voluptates, impedit illum ullam explicabo optio a sequi itaque suscipit consequatur quos quibusdam nam ratione architecto beatae. Fugit, earum?
+Quas quia sapiente illum voluptatum esse tempore quasi, fuga beatae perferendis facere alias voluptas dolorem unde inventore quibusdam maxime accusamus aliquid expedita nobis vel? Rerum, voluptas enim! Debitis, magnam. Beatae.</p>
+<div class="forms1">
 {{#if addWishlist}}
 <form action="/private/add-favorites" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><i class="far fa-heart"></i></button>
+  <button type="submit" class="movie-btn"><i class="far fa-heart fa-3x"></i></button>
 </form>
 {{/if}}
 {{!-- Game added to user wishlist --}}
 {{#unless addWishlist}}
 <form action="/private/remove-favorites" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><i class="fas fa-heart"></i></button>
+  <button type="submit" class="movie-btn"><i id="heart" class="fas fa-heart fa-3x"></i></button>
 </form>
 {{/unless}}
 
 {{#if addWatchlist}}
 <form action="/private/add-watchlist" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><<i class="far fa-eye"></i></button>
+  <button type="submit" class="movie-btn">
+    <<i class="far fa-eye fa-3x"></i>
+  </button>
 </form>
 {{/if}}
 {{!-- Game added to user wishlist --}}
 {{#unless addWatchlist}}
 <form action="/private/remove-watchlist" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
-  <button type="submit"><i class="fas fa-eye"></i></button>
+  <button type="submit" class="movie-btn"><i id="eyefill" class="fas fa-eye fa-3x"></i></button>
 </form>
 {{/unless}}
+</div>
+</div>
+
+</div>
+
+
+
+
+
+

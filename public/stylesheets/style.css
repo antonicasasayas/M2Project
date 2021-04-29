@@ -123,20 +123,7 @@ body {
   list-style: none;
   padding: 0;
 }
-#blanc{
-  color: white;
-}
-#any{
-  color:white;
-}
 
-#generes{
-  margin:0;
-}
-
-#nota{
-  margin-top: 0;
-}
 .movie_card .info_section .movie_social ul li {
   display: inline-block;
   color: rgba(0, 0, 0, 0.3);
@@ -245,9 +232,7 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-main{
-  background: linear-gradient(#20272e, #14181c);
-}
+
 .movie_card:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -399,19 +384,38 @@ main{
 }
 
 #bright {
-  -webkit-box-shadow: 0px 0px 150px -45px gold;
-          box-shadow: 0px 0px 150px -45px gold;
+  -webkit-box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+          box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
 }
 
 #bright:hover {
-  -webkit-box-shadow: 0px 0px 120px -55px gold;
-          box-shadow: 0px 0px 120px -55px gold;
+  -webkit-box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+          box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
 }
 
-.notifications, .watch-column{
-  background: #2c3641;
-  border-radius: 12px;
-  width: 500px;
+#tomb {
+  -webkit-box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+          box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+}
+
+#tomb:hover {
+  -webkit-box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+          box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+}
+
+.tomb_back {
+  background: url("https://fsmedia.imgix.net/cd/c9/5e/ba/4817/4d9a/93f0/c776ec32ecbc/lara-crofts-neck-looks-unnatural-in-the-new-poster-for-tomb-raider.png");
+}
+
+#ave {
+  -webkit-box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
+          box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
+  margin-bottom: 200px;
+}
+
+#ave:hover {
+  -webkit-box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
+          box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
 }
 
 .ave_back {
@@ -550,7 +554,6 @@ label {
 
 #centercol {
   height: 2000px;
-  
 }
 
 #checkbx {
@@ -592,7 +595,7 @@ form {
 }
 
 #nav1 {
-  background-color: #20272e;
+  background-color: black;
 }
 
 .feed {
@@ -657,24 +660,8 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 250px;
-  padding-left: 10px;
 }
-#not-title{
-  margin-top: 20px;
-}
-.style-one {
 
-  border: none;
-  border-left: 1px solid hsla(200, 10%, 50%, 100);
-  height: 100vh;
-  width: 1px;
-  background-image: white;
-}
-hr.style-two {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
-}
 .notifications p {
   width: 300px;
 }
@@ -685,7 +672,7 @@ hr {
 
 .watch-column {
   position: absolute;
-  top: 100px;
+  top: 180px;
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,9 +683,7 @@ hr {
           flex-direction: column;
   width: 250px;
 }
-#lol{
-  margin-top: 20px;
-}
+
 h3 {
   color: white;
   padding-bottom: 50px;

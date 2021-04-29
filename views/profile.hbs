@@ -1,18 +1,47 @@
 <h1>Welcome {{user.username}}</h1>
 
+
+
 <a class="nav-link" href="/auth/logout">Logout</a>
 
 </div>
 <h3>Favorites</h3>
+
+<div class="cards">
 {{#each user.favorites}}
 
-<a href="/series/{{id}}">
-  <img src="{{image}}" alt="" style='width: 250px;'>
-  <p>{{title}}</p>
-</a>
+ 
+
+  <a href="/private/series/{{id}}">
+  <div  class="card" style="width: 18rem;">
+    <img src="{{image}}" class="card-img-top" alt="...">
+   
+      
+     
+      
+  </div>
+  </a>
 
 {{/each}}
+</div>
+<div class="cards">
+  {{#each user.watchlist}}
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-<script src="/javascripts/script.js"></script>
+
+  <a href="/private/series/{{id}}">
+    <div class="card" style="width: 18rem;">
+      <img src="{{image}}" class="card-img-top" alt="...">
+
+
+
+
+    </div>
+  </a>
+
+  {{/each}}
+</div>
+
+
+{{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="/javascripts/script.js"></script> --}}

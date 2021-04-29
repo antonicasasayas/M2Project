@@ -6,14 +6,22 @@ const router = express.Router();
 const Post = require("../models/Post.model");
 const Series = require("../models/Series.model");
 const User = require("../models/User.model");
-router.get("/profile", isLoggedIn, (req, res, next) => {
-  const { id } = req.params;
-  User.findById(id)
+router.get("/:id", isLoggedIn, (req, res, next) => {
+  
+  User.findById(req.user._id)
     .populate("favorites")
     .then((user) => {
-      res.render("profile", { user: req.user });
-    });
-});
+      res.render("profile", { user });
+      // Series.find({})
+      //   .then(series => {
+      //   res.render("profile", { series, user });
+      //   })
+      
+      // .catch(error => console.error(error))
+    })
+    .catch(error => console.error(error))
+})
+  
 
 router.get("/feed-json", (req, res) => {
   Post.find({})

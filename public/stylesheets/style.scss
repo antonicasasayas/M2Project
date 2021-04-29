@@ -1894,6 +1894,12 @@ ul.ks-cboxtags li input[type="checkbox"]:focus+label {
 }
 .noback{
   background: none ;
+  border: none;
+  
+}
+
+.noback button{
+  
 }
 /*# sourceMappingURL=style.css.map */
 
@@ -1906,4 +1912,72 @@ ul.ks-cboxtags li input[type="checkbox"]:focus+label {
   border-radius: 20px;
   padding: 20px;
   width: 350px;
+}
+
+main{
+  background-color: #20272e;
+  height: 2000px;
+}
+
+.fav{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cards{
+  display: flex;
+  flex-wrap:wrap ;
+}
+
+.card{
+  margin: 20px;
+}
+
+.card-img-top{
+  height: 350px;
+}
+
+.details{
+  display: flex;
+  color: white;
+  margin: 30px;
+  border: white;
+}
+
+.data{
+  margin-left: 20px;
+}
+
+.forms1{
+  display: flex;
+}
+
+.movie-btn{
+  background: none;
+  border: none;
+}
+
+#heart{
+  color: red;
+}
+
+#eyefill{
+  color: gold;
+}
+
+.data p{
+  line-height: 30px;
+}
+
+#genresdetails{
+ padding-bottom: 0;
+  
+}
+
+#actorsdetails{
+  color: rgb(167, 167, 167)
+}
+
+.border{
+  border-radius: 10px;
 }

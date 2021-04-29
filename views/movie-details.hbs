@@ -11,12 +11,10 @@
         <a class="nav-link" href="/private/profile">Profile</a>
         <a class="nav-link" href="/private/feed">Feed</a>
         <a class="nav-link" href="/private/quiz">Quiz</a>
-        <form class="noback" action="/private/search" method="GET">
-          <input type="text" name="search">
-          <button type="submit">Buscar</button>
-        </form>
-        <form onsubmit="event.preventDefault();" action="/private/search" method="GET" role="search">
-          <label for="search">Search for stuff</label>
+        
+        
+        <form class="noback" action="/private/search" method="GET" role="search">
+          <label for="search"></label>
           <input id="search" name="search" type="search" placeholder="Search..." autofocus required />
           <button type="submit">Go</button>
         </form>
@@ -31,8 +29,9 @@
   <div class="data">
 <h1>{{series.title}}</h1>
 <hr class="style-two">
-<p>{{series.genre}}</p>
-<p>{{series.actors}}</p>
+<h3 id="genresdetails">{{series.genre}}</h3>
+
+<h5 id="actorsdetails">{{series.actors}}</h5>
 <p>{{series.plot}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis illum voluptate eius, necessitatibus sed, quidem consectetur doloribus quisquam voluptatibus repellendus! Laudantium vero corporis adipisci magnam, assumenda eaque excepturi eum!
 Quas autem odit dolore obcaecati nobis illo delectus aperiam harum incidunt voluptates, impedit illum ullam explicabo optio a sequi itaque suscipit consequatur quos quibusdam nam ratione architecto beatae. Fugit, earum?
 Quas quia sapiente illum voluptatum esse tempore quasi, fuga beatae perferendis facere alias voluptas dolorem unde inventore quibusdam maxime accusamus aliquid expedita nobis vel? Rerum, voluptas enim! Debitis, magnam. Beatae.</p>

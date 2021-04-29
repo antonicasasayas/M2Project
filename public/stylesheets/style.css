@@ -1941,6 +1941,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .noback {
   background: none;
+  border: none;
 }
 .eachname {
   padding-bottom: 10px;
@@ -1951,5 +1952,79 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   border-radius: 20px;
   padding: 20px;
   width: 350px;
+}
+
+main {
+  background-color: #20272e;
+  height: 2000px;
+}
+
+.fav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+}
+
+.card-img-top {
+  height: 350px;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  margin: 30px;
+  border: white;
+}
+
+.data {
+  margin-left: 20px;
+}
+
+.forms1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.movie-btn {
+  background: none;
+  border: none;
+}
+
+#heart {
+  color: red;
+}
+
+#eyefill {
+  color: gold;
+}
+
+.data p {
+  line-height: 30px;
+}
+
+#genresdetails {
+  padding-bottom: 0;
+}
+
+#actorsdetails {
+  color: #a7a7a7;
+}
+
+.border {
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

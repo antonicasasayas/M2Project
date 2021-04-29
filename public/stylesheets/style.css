@@ -674,7 +674,7 @@ hr {
 
 .watch-column {
   position: absolute;
-  top: 180px;
+  top: 100px;
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1642,7 +1642,7 @@ hr {
 
 .watch-column {
   position: absolute;
-  top: 180px;
+  top: 100px;
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1941,5 +1941,15 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .noback {
   background: none;
+}
+.eachname {
+  padding-bottom: 10px;
+}
+
+.watch-column, .notifications {
+  background-color: #384450;
+  border-radius: 20px;
+  padding: 20px;
+  width: 350px;
 }
 /*# sourceMappingURL=style.css.map */

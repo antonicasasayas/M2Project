@@ -201,7 +201,7 @@ router.get("/feed", isLoggedIn, (req, res) => {
       }
       
         
-      User.find({favorites : { $exists: true}, $where:"this.favorites.length > 0"})
+      User.find({favorites : { $exists: true}})
 
         .populate("favorites")
         .populate("watchlist")

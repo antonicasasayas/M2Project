@@ -908,6 +908,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus+label {
 /*# sourceMappingURL=style.css.map */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -919,7 +920,7 @@ a {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -951,14 +952,14 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
 }
 
 .movie_card:hover {
   -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   -webkit-box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1009,7 +1010,7 @@ body {
   margin-right: 20px;
   height: 120px;
   -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
 .movie_card .info_section .movie_desc {
@@ -1038,7 +1039,7 @@ body {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   -webkit-transition-delay: 0.15s;
-          transition-delay: 0.15s;
+  transition-delay: 0.15s;
   margin: 0 10px;
 }
 
@@ -1067,13 +1068,16 @@ body {
   .movie_header {
     width: 65%;
   }
+
   .movie_desc {
     width: 50%;
   }
+
   .info_section {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #e5e6e6), to(transparent));
     background: linear-gradient(to right, #e5e6e6 50%, transparent 100%);
   }
+
   .blur_back {
     width: 80%;
     background-position: -100% 10% !important;
@@ -1087,17 +1091,21 @@ body {
     min-height: 350px;
     height: auto;
   }
+
   .blur_back {
     width: 100%;
     background-position: 50% 50% !important;
   }
+
   .movie_header {
     width: 100%;
     margin-top: 85px;
   }
+
   .movie_desc {
     width: 100%;
   }
+
   .info_section {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e5e6e6), to(transparent));
     background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
@@ -1116,7 +1124,7 @@ body {
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -1143,7 +1151,7 @@ body {
 
 .movie_card:hover {
   -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1194,7 +1202,7 @@ body {
   margin-right: 20px;
   height: 120px;
   -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
 .movie_card .info_section .movie_desc {
@@ -1223,7 +1231,7 @@ body {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   -webkit-transition-delay: 0.15s;
-          transition-delay: 0.15s;
+  transition-delay: 0.15s;
   margin: 0 10px;
 }
 
@@ -1252,13 +1260,16 @@ body {
   .movie_header {
     width: 60%;
   }
+
   .movie_desc {
     width: 50%;
   }
+
   .info_section {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0d0d0c), to(transparent));
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
   }
+
   .blur_back {
     width: 80%;
     background-position: -100% 10% !important;
@@ -1272,17 +1283,21 @@ body {
     min-height: 350px;
     height: auto;
   }
+
   .blur_back {
     width: 100%;
     background-position: 50% 50% !important;
   }
+
   .movie_header {
     width: 100%;
     margin-top: 85px;
   }
+
   .movie_desc {
     width: 100%;
   }
+
   .info_section {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #141413), to(transparent));
     background: linear-gradient(to top, #141413 50%, transparent 100%);
@@ -1293,22 +1308,22 @@ body {
 
 #bright {
   -webkit-box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
-          box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
 }
 
 #bright:hover {
   -webkit-box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
-          box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
 }
 
 #tomb {
   -webkit-box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
-          box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+  box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
 }
 
 #tomb:hover {
   -webkit-box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
-          box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+  box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
 }
 
 .tomb_back {
@@ -1317,13 +1332,13 @@ body {
 
 #ave {
   -webkit-box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
-          box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
+  box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
   margin-bottom: 200px;
 }
 
 #ave:hover {
   -webkit-box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
-          box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
+  box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
 }
 
 .ave_back {
@@ -1565,8 +1580,8 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 250px;
 }
 
@@ -1587,8 +1602,8 @@ hr {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 250px;
 }
 
@@ -1607,20 +1622,20 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 750px;
   background-image: url("/images/4k.jpg");
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .buttonsHP {
@@ -1629,8 +1644,8 @@ h3 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 #TTT {
@@ -1642,15 +1657,15 @@ h3 {
   border-radius: 2px;
   background-color: #680707;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-width: 0ch;
   margin: 1cm;
   -webkit-box-shadow: 1cm;
-          box-shadow: 1cm;
+  box-shadow: 1cm;
   color: white;
 }
 
@@ -1661,8 +1676,8 @@ h3 {
 
 .navbar-nav {
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 #navig {
@@ -1750,16 +1765,16 @@ ul.social-network li {
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* QUIZ */
@@ -1769,16 +1784,16 @@ ul.social-network li {
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container2 {
@@ -1786,11 +1801,11 @@ ul.social-network li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 640px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 13px;
@@ -1846,17 +1861,17 @@ ul.ks-cboxtags li label::before {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+ul.ks-cboxtags li input[type="checkbox"]:checked+label::before {
   content: "\f00c";
   -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
+  transform: rotate(-360deg);
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+ul.ks-cboxtags li input[type="checkbox"]:checked+label {
   border: 2px solid gold;
   background-color: goldenrod;
   color: #fff;
@@ -1873,7 +1888,10 @@ ul.ks-cboxtags li input[type="checkbox"] {
   opacity: 0;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+ul.ks-cboxtags li input[type="checkbox"]:focus+label {
   border: 2px solid gold;
+}
+.noback{
+  background: none ;
 }
 /*# sourceMappingURL=style.css.map */

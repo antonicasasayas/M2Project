@@ -11,7 +11,15 @@
         <a class="nav-link" href="/private/profile">Profile</a>
         <a class="nav-link" href="/private/feed">Feed</a>
         <a class="nav-link" href="/private/quiz">Quiz</a>
-        <a class="nav-link" href="/private/searchbar">Search</a>
+        <form class="noback" action="/private/search" method="GET">
+          <input type="text" name="search">
+          <button type="submit">Buscar</button>
+        </form>
+        <form onsubmit="event.preventDefault();" action="/private/search" method="GET" role="search">
+          <label for="search">Search for stuff</label>
+          <input id="search" name="search" type="search" placeholder="Search..." autofocus required />
+          <button type="submit">Go</button>
+        </form>
       </div>
     </div>
   </div>

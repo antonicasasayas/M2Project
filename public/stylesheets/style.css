@@ -1938,4 +1938,8 @@ ul.ks-cboxtags li input[type="checkbox"] {
 ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   border: 2px solid gold;
 }
+
+.noback {
+  background: none;
+}
 /*# sourceMappingURL=style.css.map */

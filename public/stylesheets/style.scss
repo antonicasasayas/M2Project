@@ -1,13 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Roboto";
 }
 
 a {
   color: #00B7FF;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
 
 * {
   box-sizing: border-box;
@@ -18,7 +22,8 @@ html,
 body {
   margin: 0;
   background: white;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: 'Roboto',
+  sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -214,7 +219,7 @@ html,
 body {
   margin: 0;
   background: #20272e;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: "Roboto";
   font-size: 14px;
   font-weight: 400;
 }
@@ -425,7 +430,8 @@ a {
 }
 
 .navbar-nav {
-  width: 100%
+  width: 100%;
+  padding: 10px;
 }
 
 @media(min-width:568px) {
@@ -569,7 +575,7 @@ form {
   border: 1px solid #1f262d;
   background-color: #1f262d;
   border-radius: 5px;
-  padding: 20px
+  
 }
 
 #comments {
@@ -691,7 +697,7 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  background-image: url("/images/29582.jpg");
   background-position: cover;
   background-size: cover;
   object-fit: cover;
@@ -714,6 +720,7 @@ h3 {
   margin: 1cm;
   box-shadow: 1cm;
   color: white;
+  
 }
 
 #navbarNavAltMarkup {
@@ -726,7 +733,7 @@ h3 {
 }
 
 #navig {
-  background-color: black;
+  background-color: #20272e;
 }
 
 /* LOGIN PAGE */
@@ -764,7 +771,7 @@ h3 {
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
   width: 300px;
-  border-color: #2ecc71
+  border-color: gold
 }
 
 .box input[type="submit"] {
@@ -773,7 +780,7 @@ h3 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #2ecc71;
+  border: 2px solid gold;
   padding: 14px 40px;
   outline: none;
   color: white;
@@ -783,7 +790,7 @@ h3 {
 }
 
 .box input[type="submit"]:hover {
-  background: #2ecc71
+  background: gold;
 }
 
 .forgot {
@@ -804,7 +811,7 @@ ul.social-network li {
 
 .container1 {
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  
   background-position: cover;
   background-size: cover;
   object-fit: cover;
@@ -912,7 +919,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus+label {
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -929,7 +936,8 @@ html,
 body {
   margin: 0;
   background: #20272e;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: 'Roboto',
+  sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -1133,7 +1141,8 @@ html,
 body {
   margin: 0;
   background: #20272e;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: 'Roboto',
+  sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -1348,7 +1357,7 @@ body {
 
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -1500,7 +1509,7 @@ form {
   border: 1px solid #1f262d;
   background-color: #1f262d;
   border-radius: 5px;
-  padding: 20px;
+  
 }
 
 #comments {
@@ -1519,7 +1528,9 @@ form {
 }
 
 #nav1 {
-  background-color: black;
+  background-color: #171b20;
+  border-bottom:1px solid goldenrod;
+  
 }
 
 .feed {
@@ -1627,16 +1638,19 @@ h3 {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  
+  background-image: url("/images/2.jpg") ;
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
+  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 
 .buttonsHP {
@@ -1655,8 +1669,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 2px;
-  background-color: #680707;
+  border-radius: 4px;
+  background-color: goldenrod;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1702,7 +1716,7 @@ h3 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #4e0101;
+  border: 2px solid #3f6188;
   padding: 10px 10px;
   width: 250px;
   outline: none;
@@ -1721,7 +1735,7 @@ h3 {
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
   width: 300px;
-  border-color: #2ecc71;
+  border-color: #3f6188;
 }
 
 .box input[type="submit"] {
@@ -1730,18 +1744,18 @@ h3 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #2ecc71;
+  border: 2px solid goldenrod;
   padding: 14px 40px;
   outline: none;
   color: white;
-  border-radius: 24px;
+  border-radius: 5px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
 }
 
 .box input[type="submit"]:hover {
-  background: #2ecc71;
+  background: goldenrod;
 }
 
 .forgot {
@@ -1762,7 +1776,7 @@ ul.social-network li {
 
 .container1 {
   height: 750px;
-  background-image: url("/images/4k.jpg");
+  background-image: url("/images/2.jpg");
   background-position: cover;
   background-size: cover;
   -o-object-fit: cover;
@@ -1808,7 +1822,8 @@ ul.social-network li {
   -ms-flex-align: center;
   align-items: center;
   max-width: 640px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto',
+  sans-serif;
   font-size: 13px;
 }
 
@@ -1851,7 +1866,8 @@ ul.ks-cboxtags li label::before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Roboto',
+  sans-serif;
   font-weight: 900;
   font-size: 12px;
   padding: 2px 6px 2px 2px;
@@ -1860,6 +1876,7 @@ ul.ks-cboxtags li label::before {
   transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  font-family: "Font Awesome 5 Free";
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked+label::before {
@@ -1895,10 +1912,11 @@ ul.ks-cboxtags li input[type="checkbox"]:focus+label {
 .noback{
   background: none ;
   border: none;
+  padding: none;
   
 }
 
-.noback button{
+.noback {
   
 }
 /*# sourceMappingURL=style.css.map */
@@ -2043,7 +2061,8 @@ hr.style-one {
   -ms-flex-align: center;
   align-items: center;
   max-width: 640px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-family: 'Roboto',
+ sans-serif;
   font-size: 13px;
 }
 
@@ -2063,7 +2082,7 @@ ul.ks-cboxtags li label {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.9);
   border: 0px solid rgb(255, 255, 255);
-  color: #857d7d;
+  color: black;
   border-radius: 2px;
   white-space: nowrap;
   margin: 3px 0px;
@@ -2088,7 +2107,8 @@ ul.ks-cboxtags li label::before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
+ font-family: 'Roboto',
+ sans-serif;
   font-weight: 900;
   font-size: 12px;
   padding: 2px 6px 2px 2px;
@@ -2097,6 +2117,7 @@ ul.ks-cboxtags li label::before {
   transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  font-family: "Font Awesome 5 Free";
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked+label::before {
@@ -2142,17 +2163,18 @@ h2 {
 }
 
 .box {
-  background-color: #0d131b;
+  
   border-width: 0ch;
 }
 
 #quizButton {
-  background-color: gold;
+  background-color: goldenrod;
   border-width: 0ch;
   width: 200px;
   height: 40px;
   color: #20272e;
-  font-family: "Lucida Grande";
+  font-family: 'Roboto',
+  sans-serif;
    
 }
 
@@ -2160,94 +2182,78 @@ h2 {
   
   border-radius: 10px;
 }
-* LOGIN PAGE */ .box {
-  width: 500px;
-  padding: 40px;
-  background: #191919;
-  text-align: center;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+
+#pepe12{
+  font-size: 50px;
 }
 
-.box input[type="text"],
-.box input[type="password"] {
-  border: 0;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #3f6188;
-  padding: 10px 10px;
-  width: 250px;
-  outline: none;
+#pepe13{
+  color: rgb(189, 189, 189)
+
+}
+  #login-form{
+    background: none;
+  }
+
+  .pepe123{
+    color:white;
+  }
+
+#pepe14{
+  color:white;
+  border:  1px solid gold;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  border-radius: 24px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  opacity: 1;
+  /* Firefox */
 }
 
-.box h1 {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
+#login-btn{
+  border-radius: 2px solid goldenrod;
+  background-color: goldenrod;
+  color: black;
 }
 
-.box input[type="text"]:focus,
-.box input[type="password"]:focus {
-  width: 300px;
-  border-color: #3f6188;
+.login-button{
+  border-radius: 5px solid goldenrod;
+  background-color: gold;
+  color: black;
 }
 
-.box input[type="submit"] {
-  border: 0;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid gold;
-  padding: 14px 40px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  cursor: pointer;
+.search-bar{
+  padding: none;
+  border-radius: 5px;
+  border: 1px solid goldenrod;
+  height: 25px;
 }
 
-.box input[type="submit"]:hover {
-  background: gold;
-}
-
-.forgot {
-  text-decoration: underline;
-}
-
-ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left: 0 !important;
-  padding: 0;
-}
-
-ul.social-network li {
-  display: inline;
-  margin: 0 5px;
-}
-
-.container1 {
-  height: 750px;
+#searchbar{
+  padding: none;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: goldenrod;
   
-  background-position: cover;
-  background-size: cover;
-  -o-object-fit: cover;
-  object-fit: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+
+#golden1{
+  border:goldenrod;
+  background-color: goldenrod;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.index-nav{
+  background-color: black;
+}
+
+.feed{
+  border-top:goldenrod;
+}
+
+a{
+  text-decoration: none;
 }

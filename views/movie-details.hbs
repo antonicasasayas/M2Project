@@ -13,10 +13,9 @@
         <a class="nav-link" href="/private/quiz">Quiz</a>
         
         
-        <form class="noback" action="/private/search" method="GET" role="search">
-          <label for="search"></label>
-          <input id="search" name="search" type="search" placeholder="Search..." autofocus required />
-          <button type="submit">Go</button>
+        <form id="searchbar" class="noback" action="/private/search" method="GET">
+          <input class="search-bar" type="text" name="search">
+          <button id="golden1" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -54,7 +53,7 @@ Quas quia sapiente illum voluptatum esse tempore quasi, fuga beatae perferendis 
 <form action="/private/add-watchlist" method="POST">
   <input type="hidden" name="seriesID" value="{{series._id}}">
   <button type="submit" class="movie-btn">
-    <<i class="far fa-eye fa-3x"></i>
+    <i id ="eye1" class="far fa-eye fa-3x"></i>
   </button>
 </form>
 {{/if}}

@@ -11,9 +11,9 @@
         <a class="nav-link" href="/private/profile">Profile</a>
         <a class="nav-link" href="/private/feed">Feed</a>
         <a class="nav-link" href="/private/quiz">Quiz</a>
-        <form class="noback" action="/private/search" method="GET">
-          <input type="text" name="search">
-          <button type="submit">Buscar</button>
+        <form id="searchbar" class="noback" action="/private/search" method="GET">
+          <input class="search-bar" type="text" name="search">
+          <button id="golden1" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -25,7 +25,7 @@
 <hr class="style-one">
 
 {{#each series}}
-
+<a href="/private/series/{{_id}}">
 <div class="movie_card" id="bright">
   <div class="info_section">
     <div class="movie_header">
@@ -44,6 +44,7 @@
   </div>
   <div class="blur_back bright_back"><img src="{{image}}" height = "500" width = "400" style="margin-left: 300px;" alt=""></div>
 </div>
+</a>
 {{/each}}
 
 

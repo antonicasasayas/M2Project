@@ -12,9 +12,9 @@
         <a class="nav-link" href="/private/feed">Feed</a>
         <a class="nav-link" href="/private/quiz">Quiz</a>
        
-        <form class="noback" action="/private/search" method="GET">
-          <input type="text" name="search">
-          <button type="submit">Buscar</button>
+        <form id="searchbar" class="noback" action="/private/search" method="GET">
+          <input class="search-bar" type="text" name="search">
+          <button id="golden1" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -27,19 +27,19 @@
   <form id="quiz-form"action="/private/recommendations" method="POST">
     <div class="container2">
       <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxOne" name="action"><label id= "labels1" for="checkboxOne">Action</label></li>
-        <li><input type="checkbox" id="checkboxTwo" name="comedy"><label id= "labels1" for="checkboxTwo">Comedy</label></li>
-        <li><input type="checkbox" id="checkboxThree" name="drama"><label id= "labels1" for="checkboxThree">Drama</label></li>
-        <li><input type="checkbox" id="checkboxFour" name="mystery"><label id= "labels1" for="checkboxFour">Mystery</label></li>
-        <li><input type="checkbox" id="checkboxFive" name="thriller"><label id= "labels1" for="checkboxFive">Thriller</label></li>
-        <li><input type="checkbox" id="checkboxSix" name="adventure"><label id= "labels1" for="checkboxSix">Adventure</label></li>
-        <li><input type="checkbox" id="checkboxSeven" name="horror"><label id= "labels1" for="checkboxSeven">Horror</label></li>
-        <li><input type="checkbox" id="checkboxEight" name="romance"><label id= "labels1" for="checkboxEight">Romance</label></li>
-        <li><input type="checkbox" id="checkboxNine" name="crime"><label id= "labels1" for="checkboxNine">Crime</label></li>
-        <li><input type="checkbox" id="checkboxTen" name="western"><label id= "labels1" for="checkboxTen">Western</label></li>
-        <li><input type="checkbox" id="checkboxTwelve" name="animation"><label id= "labels1" for="checkboxTwelve">Animation</label>
+        <li><input type="checkbox" id="checkboxOne" name="Action"><label id= "labels1" for="checkboxOne">Action</label></li>
+        <li><input type="checkbox" id="checkboxTwo" name="Comedy"><label id= "labels1" for="checkboxTwo">Comedy</label></li>
+        <li><input type="checkbox" id="checkboxThree" name="Drama"><label id= "labels1" for="checkboxThree">Drama</label></li>
+        <li><input type="checkbox" id="checkboxFour" name="Mystery"><label id= "labels1" for="checkboxFour">Mystery</label></li>
+        <li><input type="checkbox" id="checkboxFive" name="Thriller"><label id= "labels1" for="checkboxFive">Thriller</label></li>
+        <li><input type="checkbox" id="checkboxSix" name="Adventure"><label id= "labels1" for="checkboxSix">Adventure</label></li>
+        <li><input type="checkbox" id="checkboxSeven" name="Horror"><label id= "labels1" for="checkboxSeven">Horror</label></li>
+        <li><input type="checkbox" id="checkboxEight" name="Romance"><label id= "labels1" for="checkboxEight">Romance</label></li>
+        <li><input type="checkbox" id="checkboxNine" name="Crime"><label id= "labels1" for="checkboxNine">Crime</label></li>
+        <li><input type="checkbox" id="checkboxTen" name="Western"><label id= "labels1" for="checkboxTen">Western</label></li>
+        <li><input type="checkbox" id="checkboxTwelve" name="Animation"><label id= "labels1" for="checkboxTwelve">Animation</label>
         </li>
-        <li><input type="checkbox" id="checkboxThirteen" name="family"><label id="labels1" for="checkboxThirteen">Family</label></li>
+        <li><input type="checkbox" id="checkboxThirteen" name="Family"><label id="labels1" for="checkboxThirteen">Family</label></li>
       </ul>
       <button id="quizButton" type="submit" class="btn btn-primary">Submit</button>
     </div>

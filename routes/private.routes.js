@@ -161,25 +161,38 @@ router.get("/recommendations-json", (req, res) => {
     .catch((error) => console.error(error));
 });
 
-router.post("/recommendations", isLoggedIn,  (req, res) => {
-  const query = Object.keys(req.body).join(" ");
-  console.log(query)
-  console.log(req.body)
-
-  Series.find({ genre: { $regex: `.*(?i)${query}.*` } }).sort({rating:-1}).limit(10)
-    .then((series) => {
-      res.render("recommendations", { user:req.user , series });
-    })
-    .catch((error) => console.error(error));
-  
-  
-  
- 
-  
-      
- 
-    
-  })
+router.post("/recommendations", isLoggedIn, (req, res) => {
+  let query = " ";
+  console.log(Object.keys(req.body).length);
+  if (Object.keys(req.body).length === 1) {
+    query = Object.keys(req.body).join(" ");
+    console.log("hola");
+    console.log(query);
+    Series.find({ genre: { $regex: `.*(?i)${query}.*` } })
+      .limit(5)
+      .then((series) => {
+        res.render("recommendations", { series });
+      })
+      .catch((error) => console.error(error));
+  } else {
+    query = Object.keys(req.body).join(".*|.*");
+    const query2 = ".*" + query + ".*|";
+    const query3 = new RegExp(query2, "g");
+    console.log(query);
+    console.log(query2);
+    console.log(query3);
+    // const reg =
+    // `/.*Action.*|.*Romance.*|/g`
+    // ".*Action.*"
+    Series.find({ genre: { $regex: `${query3}` } })
+      .sort({ rating: -1 })
+      .limit(5)
+      .then((series) => {
+        res.render("recommendations", { series, user: req.user });
+      })
+      .catch((error) => console.error(error));
+  }
+});
 
 
 

@@ -1683,7 +1683,26 @@ h3 {
   box-shadow: 1cm;
   color: white;
 }
-
+#piton1{
+  width: 200px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  background-color: goldenrod;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-width: 0ch;
+  margin: 1cm;
+  -webkit-box-shadow: 1cm;
+  box-shadow: 1cm;
+  color: white;
+}
 #navbarNavAltMarkup {
   background: none;
   color: white;
